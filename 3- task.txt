@@ -1,0 +1,185 @@
+1Q)For the given JSON iterate over all for loops (for, for in, for of, forEach)
+var obj=[
+    {
+        person:"pinky",
+        age:20,
+        company:"guvi",
+    },
+    {
+        person:"albert",
+        age:22,
+        company:"guvi geek",
+    },
+    {
+        person:"abdul",
+        age:23,
+        company:"guvi geek network",
+    },
+];
+
+CODE/ANS:var obj=[
+    {
+        person:"pinky",
+        age:20,
+        company:"guvi",
+    },
+    {
+        person:"albert",
+        age:22,
+        company:"guvi geek",
+    },
+    {
+        person:"abdul",
+        age:23,
+        company:"guvi geek network",
+    },
+];
+// for loop
+for(var i=0;i<obj.length;i++){
+     console.log(obj[i]);      
+     console.log(obj[i].person);
+}
+console.log(obj[0]);
+OUTPUT:
+ {person: 'pinky', age: 20, company: 'guvi'}
+ pinky
+ {person: 'albert', age: 22, company: 'guvi geek'}
+ albert
+ {person: 'abdul', age: 23, company: 'guvi geek network'}
+ abdul
+{person: 'pinky', age: 20, company: 'guvi'}
+
+
+// for of loop
+for(var i of obj){
+    console.log(`
+    ${i.person}
+    ${i.age}
+    ${i.company}`);
+}
+
+OUTPUT:
+    pinky
+    20
+    guvi
+
+    albert
+    22
+    guvi geek
+
+    abdul
+    23
+    guvi geek network
+
+// for in loop
+for(var i in obj){
+    console.log(`
+    ${obj[i].person}
+    ${obj[i].company}
+    ${obj[i].age}
+    `);
+}
+OUTPUT:
+
+    pinky
+    guvi
+    20
+    
+    albert
+    guvi geek
+    22
+    
+    abdul
+    guvi geek network
+    23
+
+// for each loop
+obj.forEach((data)=>{
+    console.log(`
+    ${data.person}
+    ${data.age}
+    ${data.company}`);
+});
+OUTPUT:
+ pinky
+    20
+    guvi
+
+    albert
+    22
+    guvi geek
+
+    abdul
+    23
+    guvi geek network
+
+
+
+
+2Q)Create your own resume data in JSON format
+
+CODE)
+// Resume created by using array of object
+var obj=[{
+    name:"arakala",
+    email:"arakala250@gmail.com",
+    address:{
+        district:"chittoor",
+        state:"Andhrapradesh",
+        country:"India",
+    },
+    qualification:"Bacheloroftechnology",
+},
+];
+// for loop
+
+for(var i=0;i<=obj.length;i++)
+{
+console.log(obj[i]);
+}
+// console.log(`
+// ${obj[i].address.state}`);
+OUTPUT:
+{name: 'arakala', email: 'arakala250@gmail.com', address: {…}, qualification: 'Bacheloroftechnology'}
+address: {district: 'chittoor', state: 'Andhrapradesh', country: 'India'}
+email: "arakala250@gmail.com"
+name: "arakala"
+qualification: "Bacheloroftechnology"
+[[Prototype]]: Object
+
+
+// for of loop
+for(var i of obj){
+    console.log(`${i.name}
+    ${i.email}
+    ${i.address.state}`);
+}
+OUTPUT:
+arakala
+    arakala250@gmail.com
+    Andhrapradesh
+
+
+// for in loop
+for(var i in obj)
+  console.log(obj[i].name);
+  console.log(obj[i].address.country);
+OUTPUT:
+arakala
+ India
+
+//   forEach loop
+obj.forEach((data)=>{
+    console.log(`
+    ${data.name}
+    ${data.address}
+    `);
+});
+
+OUTPUT:
+
+    arakala
+    Andhrapradesh
+
+
+
